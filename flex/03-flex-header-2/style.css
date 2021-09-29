@@ -12,6 +12,21 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* flex container for everything to the left */
+.left-container{
+  display: flex;
+  align-items: center;
+}
+
+/* flex container for everything to the right */
+.right-container{
+  display: flex;
+  align-items: center;
 }
 
 .profile-image {
@@ -20,6 +35,13 @@ body {
   border-radius: 50%;
   width: 48px;
   height:  48px;
+  margin: 10px;
+  flex: 0 0 auto;
+}
+
+/* needed to add some margin to the notifications button on the right */
+.notifications{
+  margin: 20px 10px;
 }
 
 .logo {
@@ -27,6 +49,7 @@ body {
   font-size: 32px;
   font-weight: 900;
   font-style: italic;
+  margin: 10px;
 }
 
 button {
@@ -43,6 +66,14 @@ a {
   color: rebeccapurple;
 }
 
+/* made the list a flex conatiner. Thought it would be better for spacing the links */
 ul {
   list-style-type: none;
+  display: flex;
+  justify-content: left;
+  padding: 0px;
+}
+
+li{
+  margin: 10px;
 }
