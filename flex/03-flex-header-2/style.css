@@ -36,6 +36,7 @@ body {
   width: 48px;
   height:  48px;
   margin: 10px;
+  /* stops profile pic from growing/shrinking since that warps its shape */
   flex: 0 0 auto;
 }
 
