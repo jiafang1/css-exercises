@@ -20,6 +20,7 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  
 }
 
 .icon {
@@ -63,4 +64,42 @@ button.cancel {
   background: white;
   border: 1px solid #ddd;
   color: royalblue;
+}
+
+/* solution: Split icon and everything to the right of icon into 2 seperate flexboxes.
+In everything to the right: title and x button are a single flexbox,
+the text is a single flexbox, and the continue/cancel buttons are
+a single flexbox. These can be arranged into flex-direction: column.
+Add margins/padding as neccary to everything else. Make sure the ! icon
+is set to flex-shrink: 0 so it doesn't get distorted. */
+.modal{
+  display: flex;
+  padding: 15px;
+}
+
+.icon{
+  flex-shrink: 0;
+  margin-right: 15px;
+}
+
+.header{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.flex-right{
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+}
+
+.flex-head{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.flex-bottom{
+  display: flex;
+  margin-top: 15px;
 }
