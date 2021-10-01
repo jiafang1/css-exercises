@@ -25,3 +25,49 @@ input {
   width: 400px;
   margin-bottom: 16px;
 }
+
+/* solution */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header,
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(216, 211, 211, 0.61);
+  padding: 15px;
+}
+
+/* override the above css for header to set background to none*/
+.header {
+  background: none;
+}
+
+/* for some reason ul has default margin and padding. Need to manually set them to 0 */
+ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 16px;
+}
+
+button {
+  padding: 10px;
+}
+
+/* remove underline from links and change their color to black */
+a {
+  text-decoration: none;
+  color: black;
+}
