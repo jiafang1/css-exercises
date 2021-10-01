@@ -26,3 +26,68 @@ body {
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
 }
+
+/* solution */
+/*  split page into flex sections: header, middle (sidebar + cards), and footer.
+Set flex direction of body to column */
+/* middle section set to flex container with 2 items: sidebar as one and the cards together as another. */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+}
+
+/* side bar set to not grow or shrink */
+.sidebar {
+  flex-shrink: 0;
+  flex-grow: 0;
+  padding: 20px;
+}
+
+/* bit of styling */
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* bit of styling */
+li{
+  margin: 10px;
+}
+
+/* bit of styling */
+a{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+.cardgroup{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.card {
+  max-width: 300px;
+  margin: 5px;
+}
+
+.header{
+  display:flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
